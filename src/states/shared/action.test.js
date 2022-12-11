@@ -51,8 +51,8 @@ describe('asyncPopulateUsersAndTalks thunk', () => {
   it('should dispatch action correctly when data fetching success', async () => {
     // arrange
     // stub implementation
-    api.getAllUsers = () => Promise(fakeUsersResponse);
-    api.getAllTalks = () => Promise(fakeTalksResponse);
+    api.getAllUsers = () => Promise.resolve(fakeUsersResponse);
+    api.getAllTalks = () => Promise.resolve(fakeTalksResponse);
     // mock dispatch
     const dispatch = jest.fn();
 
